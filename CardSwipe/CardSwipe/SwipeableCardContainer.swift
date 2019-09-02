@@ -16,6 +16,8 @@ public class SwipeableCardContainer: UIView, SwipeableViewDelegate {
     static var preferredWidth: CGFloat = 300.0
     static let numberOfVisibleCards: Int = 3
 
+    public var shouldFlipCards = true
+
     public var dataSource: SwipeableCardContainerDataSource? {
         didSet {
             reloadData()
@@ -72,7 +74,6 @@ public class SwipeableCardContainer: UIView, SwipeableViewDelegate {
     /// calls the dataSource to layout new card views.
     public func reloadData() {
         removeAllCardViews()
-//        SwipeableCardViewContainer.preferredWidth = bounds.width - 24
         guard let dataSource = dataSource else {
             return
         }
@@ -85,7 +86,6 @@ public class SwipeableCardContainer: UIView, SwipeableViewDelegate {
         }
         
         resetEmptyView()
-        
         setNeedsLayout()
     }
 
@@ -140,25 +140,31 @@ public class SwipeableCardContainer: UIView, SwipeableViewDelegate {
 extension SwipeableCardContainer {
     
     func didTap(view: SwipeableView) {
-//        let flipDuration = 0.35
-//        if let cardView = view as? QuestionCard,
-//            let index = cardViews.firstIndex(of: cardView) {
-//            delegate?.cardViewContainer(self, didSelectCard: cardView, atIndex: index)
-//            
-//            UIView.animate(withDuration: flipDuration/2, delay: 0, options: [.curveEaseIn], animations: {
-//                cardView.transform = cardView.transform.scaledBy(x: 0.001, y: 0.96)
-//            }) { _ in
-//                cardView.handleTap()
-//                UIView.animate(withDuration: flipDuration/2, delay: 0, options: [.curveEaseOut], animations: {
-//                    cardView.transform = self.transform(forCardView: cardView, atIndex: 0)
-//                })
-//            }
-//            
-//        }
+        let flipDuration = 0.35
+        if let cardView = view as? SwipeableCard,
+            let index = cardViews.firstIndex(of: cardView) {
+            delegate?.cardViewContainer(self, didSelectCard: cardView, atIndex: index)
+
+            if shouldFlipCards {
+                // Perform first half of flip
+                UIView.animate(withDuration: flipDuration/2, delay: 0, options: [.curveEaseIn], animations: {
+                    cardView.transform = cardView.transform.scaledBy(x: 0.001, y: 0.96)
+                }) { _ in
+                    // Call the card's handleTap method
+                    cardView.handleTap()
+                    // Finish the second half of the flip
+                    UIView.animate(withDuration: flipDuration/2, delay: 0, options: [.curveEaseOut], animations: {
+                        cardView.transform = self.transform(forCardView: cardView, atIndex: 0)
+                    })
+                }
+            } else {
+                cardView.handleTap()
+            }
+        }
     }
-    
+
     func didBeginSwipe(onView view: SwipeableView) {
-        // React to Swipe Began?
+        // React to swipe starting?
     }
     
     func didEndSwipe(onView view: SwipeableView, in direction: SwipeDirection) {

@@ -16,6 +16,7 @@
 		343B6B492309D84C00011E33 /* CardSwipe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 343B6B472309D84C00011E33 /* CardSwipe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		343B6B612309D9BB00011E33 /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B6B602309D9BB00011E33 /* QuestionCard.swift */; };
 		34CFCA1E231D8F8500088F48 /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CFCA1D231D8F8500088F48 /* StoryboardViewController.swift */; };
+		34EDE02F231DB4160064AF21 /* ProgrammaticSampleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDE02E231DB4160064AF21 /* ProgrammaticSampleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		343B6B472309D84C00011E33 /* CardSwipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CardSwipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B6B602309D9BB00011E33 /* QuestionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
 		34CFCA1D231D8F8500088F48 /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
+		34EDE02E231DB4160064AF21 /* ProgrammaticSampleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticSampleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				343B6B2B2309D7AC00011E33 /* ProgrammaticViewController.swift */,
 				34CFCA1D231D8F8500088F48 /* StoryboardViewController.swift */,
 				343B6B602309D9BB00011E33 /* QuestionCard.swift */,
+				34EDE02E231DB4160064AF21 /* ProgrammaticSampleCard.swift */,
 				343B6B2D2309D7AC00011E33 /* Main.storyboard */,
 				343B6B302309D7AD00011E33 /* Assets.xcassets */,
 				343B6B322309D7AD00011E33 /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 			files = (
 				343B6B612309D9BB00011E33 /* QuestionCard.swift in Sources */,
 				34CFCA1E231D8F8500088F48 /* StoryboardViewController.swift in Sources */,
+				34EDE02F231DB4160064AF21 /* ProgrammaticSampleCard.swift in Sources */,
 				343B6B2C2309D7AC00011E33 /* ProgrammaticViewController.swift in Sources */,
 				343B6B2A2309D7AC00011E33 /* AppDelegate.swift in Sources */,
 			);

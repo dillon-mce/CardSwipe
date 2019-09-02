@@ -52,7 +52,7 @@ class ProgrammaticViewController: UIViewController, SwipeableCardContainerDelega
     }
 
     func card(forItemAtIndex index: Int) -> SwipeableCard {
-        return SwipeableCard()
+        return ProgrammaticSampleCard()
     }
 
     func viewForEmptyCards() -> UIView {
