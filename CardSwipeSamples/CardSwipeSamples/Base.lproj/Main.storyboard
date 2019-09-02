@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a7T-UM-3Qk">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Programattic-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ProgrammaticViewController" customModule="CardSwipeSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Programattic" id="APF-xF-2Yu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="933"/>
+        </scene>
+        <!--Storyboard-->
+        <scene sceneID="5Fv-mc-YG4">
+            <objects>
+                <viewController id="Zky-Kb-sVn" customClass="StoryboardViewController" customModule="CardSwipeSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tkJ-d4-ZQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dL0-Et-Txo" customClass="SwipeableCardContainer" customModule="CardSwipe">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dL0-Et-Txo" firstAttribute="leading" secondItem="2fV-0B-4fl" secondAttribute="leading" constant="20" id="L7r-GN-jgg"/>
+                            <constraint firstItem="dL0-Et-Txo" firstAttribute="top" secondItem="2fV-0B-4fl" secondAttribute="top" constant="20" id="O19-HN-sQq"/>
+                            <constraint firstItem="2fV-0B-4fl" firstAttribute="bottom" secondItem="dL0-Et-Txo" secondAttribute="bottom" constant="20" id="bZ4-uB-yrA"/>
+                            <constraint firstItem="2fV-0B-4fl" firstAttribute="trailing" secondItem="dL0-Et-Txo" secondAttribute="trailing" constant="20" id="pgi-K6-i3G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2fV-0B-4fl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Storyboard" id="bDw-ee-JmA"/>
+                    <connections>
+                        <outlet property="swipeableContainer" destination="dL0-Et-Txo" id="k7c-hQ-OlH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgp-b7-jDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="934"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cD6-x2-jd6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7T-UM-3Qk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4bH-Bc-Nfs">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Bhs-fw-Hit"/>
+                        <segue destination="Zky-Kb-sVn" kind="relationship" relationship="viewControllers" id="Khs-Nc-OrM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvD-lb-O1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
