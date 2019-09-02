@@ -32,7 +32,9 @@ class StoryboardViewController: UIViewController, SwipeableCardContainerDelegate
     }
 
     func card(forItemAtIndex index: Int) -> SwipeableCard {
-        return SwipeableCard()
+        let nib = UINib(nibName: "NibSampleCard", bundle: nil)
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? NibSampleCard else { fatalError() }
+        return view
     }
 
     func viewForEmptyCards() -> UIView {
