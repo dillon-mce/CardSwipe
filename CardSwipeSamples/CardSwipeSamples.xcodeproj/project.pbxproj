@@ -12,8 +12,6 @@
 		343B6B2F2309D7AC00011E33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B6B2D2309D7AC00011E33 /* Main.storyboard */; };
 		343B6B312309D7AD00011E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343B6B302309D7AD00011E33 /* Assets.xcassets */; };
 		343B6B342309D7AD00011E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B6B322309D7AD00011E33 /* LaunchScreen.storyboard */; };
-		343B6B482309D84C00011E33 /* CardSwipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343B6B472309D84C00011E33 /* CardSwipe.framework */; };
-		343B6B492309D84C00011E33 /* CardSwipe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 343B6B472309D84C00011E33 /* CardSwipe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34CFCA1E231D8F8500088F48 /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CFCA1D231D8F8500088F48 /* StoryboardViewController.swift */; };
 		34EDE02F231DB4160064AF21 /* ProgrammaticSampleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDE02E231DB4160064AF21 /* ProgrammaticSampleCard.swift */; };
 		34EDE031231DBDBC0064AF21 /* NibSampleCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34EDE030231DBDBC0064AF21 /* NibSampleCard.xib */; };
@@ -27,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				343B6B492309D84C00011E33 /* CardSwipe.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +39,6 @@
 		343B6B302309D7AD00011E33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343B6B332309D7AD00011E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		343B6B352309D7AD00011E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		343B6B472309D84C00011E33 /* CardSwipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CardSwipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34CFCA1D231D8F8500088F48 /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 		34EDE02E231DB4160064AF21 /* ProgrammaticSampleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticSampleCard.swift; sourceTree = "<group>"; };
 		34EDE030231DBDBC0064AF21 /* NibSampleCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibSampleCard.xib; sourceTree = "<group>"; };
@@ -54,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				343B6B482309D84C00011E33 /* CardSwipe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +59,6 @@
 		343B6B1D2309D7AC00011E33 = {
 			isa = PBXGroup;
 			children = (
-				343B6B472309D84C00011E33 /* CardSwipe.framework */,
 				343B6B282309D7AC00011E33 /* CardSwipeSamples */,
 				343B6B272309D7AC00011E33 /* Products */,
 			);
