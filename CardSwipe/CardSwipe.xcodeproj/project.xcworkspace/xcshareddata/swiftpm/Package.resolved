@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ConstraintHelpers",
+        "repositoryURL": "https://github.com/dillon-mce/ConstraintHelpers.git",
+        "state": {
+          "branch": null,
+          "revision": "a7663efb182d1a8b57b545577f6a78a0b162822b",
+          "version": "1.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

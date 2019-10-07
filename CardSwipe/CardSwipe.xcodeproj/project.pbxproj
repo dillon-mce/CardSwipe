@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		343B6B5D2309D8B400011E33 /* CGRect+SwipableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B6B532309D8B400011E33 /* CGRect+SwipableAdditions.swift */; };
 		343B6B5E2309D8B400011E33 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B6B542309D8B400011E33 /* CGPoint+SwipeableAdditions.swift */; };
 		343B6B5F2309D8B400011E33 /* SwipeableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B6B552309D8B400011E33 /* SwipeableCard.swift */; };
+		34681D2A23419C1B0070ADEA /* ConstraintHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 34681D2923419C1B0070ADEA /* ConstraintHelpers */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		343B6B532309D8B400011E33 /* CGRect+SwipableAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipableAdditions.swift"; sourceTree = "<group>"; };
 		343B6B542309D8B400011E33 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
 		343B6B552309D8B400011E33 /* SwipeableCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableCard.swift; sourceTree = "<group>"; };
+		34681D2B23419E190070ADEA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		34681D2D23419F6D0070ADEA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34681D2A23419C1B0070ADEA /* ConstraintHelpers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,8 @@
 		343B6AF92309D77E00011E33 = {
 			isa = PBXGroup;
 			children = (
+				34681D2D23419F6D0070ADEA /* README.md */,
+				34681D2B23419E190070ADEA /* Package.swift */,
 				343B6B052309D77E00011E33 /* CardSwipe */,
 				343B6B102309D77F00011E33 /* CardSwipeTests */,
 				343B6B042309D77E00011E33 /* Products */,
@@ -141,6 +147,9 @@
 			dependencies = (
 			);
 			name = CardSwipe;
+			packageProductDependencies = (
+				34681D2923419C1B0070ADEA /* ConstraintHelpers */,
+			);
 			productName = CardSwipe;
 			productReference = 343B6B032309D77E00011E33 /* CardSwipe.framework */;
 			productType = "com.apple.product-type.framework";
@@ -190,6 +199,9 @@
 				en,
 			);
 			mainGroup = 343B6AF92309D77E00011E33;
+			packageReferences = (
+				34681D2823419C1B0070ADEA /* XCRemoteSwiftPackageReference "ConstraintHelpers" */,
+			);
 			productRefGroup = 343B6B042309D77E00011E33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -497,6 +509,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34681D2823419C1B0070ADEA /* XCRemoteSwiftPackageReference "ConstraintHelpers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dillon-mce/ConstraintHelpers.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34681D2923419C1B0070ADEA /* ConstraintHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34681D2823419C1B0070ADEA /* XCRemoteSwiftPackageReference "ConstraintHelpers" */;
+			productName = ConstraintHelpers;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 343B6AFA2309D77E00011E33 /* Project object */;
 }

@@ -1,12 +1,13 @@
 //
 //  SwipeableCardContainer.swift
-//  StudySwipe
+//  CardSwipe
 //
 //  Created by Dillon McElhinney on 7/1/19.
 //  Copyright © 2019 Dillon McElhinney. All rights reserved.
 //
 
 import UIKit
+import ConstraintHelpers
 
 public class SwipeableCardContainer: UIView, SwipeableViewDelegate {
 
@@ -52,21 +53,8 @@ public class SwipeableCardContainer: UIView, SwipeableViewDelegate {
     private func setupViews() {
         translatesAutoresizingMaskIntoConstraints = false
 
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(backgroundView)
-
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(containerView)
-        NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: self.topAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            containerView.topAnchor.constraint(equalTo: self.topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-            ])
+        backgroundView.constrainToFill(self)
+        containerView.constrainToFill(self)
     }
     
     /// Reloads the data used to layout card views in the
